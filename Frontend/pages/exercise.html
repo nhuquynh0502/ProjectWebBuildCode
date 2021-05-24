@@ -1,0 +1,29 @@
+<div class="container-fluid mt-2">
+ 	<div class="row">
+ 		<div class="col">
+ 			<div class="jumbotron text-center">
+ 				<h1 class="display-3">Exercise!</h1>
+ 				<p class="lead">Danh sách các bài tập luyện code</p>
+ 				<hr class="m-y-md">
+ 			</div>
+ 		</div>
+ 	</div>
+ </div>
+
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12 mb-1" ng-repeat="item in exercise">
+			<div class="card">
+			    <div class="card-body">
+			        <h5 class="card-title">Bài {{item.id}}</h5>
+			        <p class="card-text">{{item.content}}</p>
+			        <div class="language float-right">
+			        	<a ng-click="do_exercise(1,item.id)" href="#" class="btn btn-success">C#</a>
+			        	<a ng-click="do_exercise(2,item.id)" href="#" class="btn btn-warning">Java</a>
+			        	<a ng-click="do_exercise(3,item.id)" href="#" class="btn btn-info">Python 3</a>
+			        </div>		        
+			    </div>
+		    </div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,1 @@
+cd /data && javac Main.java && java Main "$@"

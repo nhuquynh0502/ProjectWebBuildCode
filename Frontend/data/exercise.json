@@ -1,0 +1,62 @@
+[
+	{
+		"id":1,
+		"content":"Tính tổng bình phương các số lẻ từ 1 đến n"
+	},
+	{
+		"id":2,
+		"content":"Tìm max của 3 số a,b,c"
+	},
+	{
+		"id":3,
+		"content":"Kiểm tra một số có phải là số hoàn hảo?"
+	},
+	{
+		"id":4,
+		"content":"Viết chương trình in ra các số nguyên tố trong phạm vi từ 1 đến n"
+	},
+	{
+		"id":5,
+		"content":"Viết chương trình tìm tất cả các số chia hết cho 7 nhưng không phải bội số của 5, nằm trong đoạn 2000 và 3200 (tính cả 2000 và 3200). Các số thu được sẽ được in thành chuỗi trên một dòng, cách nhau bằng dấu phẩy."
+	},
+	{
+		"id":6,
+		"content":"Viết một method tính giá trị bình phương của một số."
+	},
+	{
+		"id":7,
+		"content":"Viết một chương trình nhận vào một chuỗi, phân tách nhau bởi dấu phẩy và in những từ đó thành chuỗi theo thứ tự bảng chữ cái, phân tách nhau bằng dấu phẩy."
+	},
+	{
+		"id":8,
+		"content":"Viết chương trình để in một mảng theo chiều đảo ngược"
+	},
+	{
+		"id":9,
+		"content":"Viết chương trình để tính giá trị trung bình của một mảng"
+	},
+	{
+		"id":10,
+		"content":"Cách tìm phần tử lớn thứ hai của mảng"
+	},
+	{
+		"id":11,
+		"content":"Cho n là số nguyên dương. Viết hàm tìm số k nhỏ nhất sao cho  k! >= n ."
+	},
+	{
+		"id":12,
+		"content":"Viết hàm tính tổng của những phần tử trong mảng a gồm n số nguyên mà giá trị của nó lớn hơn hoặc bằng tổng giá trị của tất cả các phần tử trước nó. Vì phần tử đầu tiên của mảng không có các phần tử trước đó nên ta quy ước tổng các phần tử trước nó là 0."
+	},
+	{
+		"id":13,
+		"content":"Cho mảng a = {1, 2, 5, 10, 20, 50, 100, 200, 500}. Viết hàm đổi tiền cho phép nhập vào số tiền x (0 < x <= 88800) và trả về cách đổi tốn ít số tờ tiền nhất. Cho biết mỗi loại mệnh giá tiền có tối đa 100 tờ tiền. Kết quả xuất ra là mảng b chứa số tờ tiền ứng với mỗi loại mệnh giá."
+	},
+	{
+		"id":14,
+		"content":"Tính đường chéo của ma trận 2 chiều"
+	},
+	{
+		"id":15,
+		"content":"Viết chương trình để tìm ma trận nghịch đảo"
+	}
+]

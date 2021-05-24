@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"  >
+	<head>
+	<title> Document  </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 	
+	<!-- <link rel="stylesheet" href="vendor/bootstrap.css"> -->
+	<base href="/Project/Frontend/">
+	<link rel="stylesheet" href="vendor/angular-material.min.css">
+	<link rel="stylesheet" href="vendor/font-awesome.css">
+ 	<link rel="stylesheet" href="css/index.css">
+</head>
+<body ng-app="myApp" ng-controller="MyController">
+
+	<nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+	    <a class="navbar-brand" href="#">Learn Code</a>
+	    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+	        aria-expanded="false" aria-label="Toggle navigation"></button>
+	    <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavId">
+	        <ul class="navbar-nav mt-2 mt-lg-0">
+	            <li class="nav-item active">
+	                <a class="nav-link" href="home">Home </a>
+	            </li>
+	            <li class="nav-item active">
+	                <a class="nav-link" href="exercise">Exercise </a>
+	            </li>
+	        </ul>
+	    </div>
+	</nav>
+
+	<div ng-view ></div>
+
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<!-- <script type="text/javascript" src="vendor/bootstrap.js"></script>  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	<script type="text/javascript" src="vendor/angular-1.5.min.js"></script>  
+	<script type="text/javascript" src="vendor/angular-route.min.js"></script>  
+  	<script type="text/javascript" src="vendor/angular-animate.min.js"></script>
+  	<script type="text/javascript" src="vendor/angular-aria.min.js"></script>
+ 	<script type="text/javascript" src="vendor/angular-messages.min.js"></script>
+ 	<script type="text/javascript" src="vendor/angular-material.min.js"></script>  
+  	<script type="text/javascript" src="js/index.js"></script>
+
+  	<!-- <script>
+  		var firebaseConfig = {
+		    apiKey: "AIzaSyAfGkgaHfXExsoHjjLeIQsKrK9dP5U0zXY",
+		    authDomain: "notemanager-4aaf1.firebaseapp.com",
+		    databaseURL: "https://notemanager-4aaf1-default-rtdb.firebaseio.com",
+		    projectId: "notemanager-4aaf1",
+		    storageBucket: "notemanager-4aaf1.appspot.com",
+		    messagingSenderId: "234486410755",
+		    appId: "1:234486410755:web:fccb7cfb48e8854f2ba836",
+		    measurementId: "G-2CQ00LGSFS"
+	  	};
+		firebase.initializeApp(firebaseConfig);
+
+  	</script> -->
+</body>
+</html>

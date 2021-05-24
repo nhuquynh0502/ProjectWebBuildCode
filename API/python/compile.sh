@@ -1,0 +1,1 @@
+cd /data && python3 Main.py
