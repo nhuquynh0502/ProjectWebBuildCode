@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-code',
@@ -31,22 +32,36 @@ export class CodeComponent implements OnInit {
   <p>Bài 21: Tạo một hàm đệ qui để tính phần tử thứ n trong dãy Fibonacci</p>
   <p>Bài 22: Mở file và hiển thị nội dung file trên màn hình</p>
   <p>Bài 23: Chuyển nội dung file thành chữ hoa</p>
-  <p>Bài 24: Sao chếp và so sánh 2 file</p>
+  <p>Bài 24: Sao chép và so sánh 2 file</p>
   `
 
-  editorOptions = { theme: 'vs-dark', language: 'javascript' };
-  code: string = 'function x() {\nconsole.log("Hello world!");\n}';
+  editorOptions = { theme: 'vs-dark', language: 'csharp' };
+  code: string = '';
   originalCode: string = 'function x() { // TODO }';
 
   // kiem soat chuyen dong mo
   isShow = false;
   fileName = 'code.js';
 
-  constructor() { }
+  constructor(private activatedroute:ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.editorOptions.language=this.activatedroute.snapshot.paramMap.get("language");
+    this.fileName = 'code.' + this.getFileExtension(this.editorOptions.language);
   }
 
+  getFileExtension(language: string): string{
+    if(language == 'csharp'){
+      return 'cs'
+    }
+    if(language == 'python'){
+      return 'py'
+    }
+    if(language == 'java'){
+      return 'java'
+    }
+  }
+  
   saveFile() {
     const blob: any = new Blob([this.code], { type: 'text/plain' });
 
