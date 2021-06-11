@@ -4,6 +4,11 @@ class Home extends CI_Controller {
 
 	public function __construct()
 	{
+		header('Access-Control-Allow-Origin: http://localhost:4200');
+    	header('Access-Control-Allow-Methods: GET, POST, PATCH, PUT, DELETE, OPTIONS');
+    	header('Access-Control-Allow-Headers: Origin, content-type, X-Auth-Token,  Access-Control-Allow-Origin');
+    	header('Content-Type: application/json');
+
 		parent::__construct();
 	}
 

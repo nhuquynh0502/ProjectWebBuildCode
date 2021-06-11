@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { HomeService } from '../home.service';
 
 @Component({
   selector: 'app-code',
   templateUrl: './code.component.html',
-  styleUrls: ['./code.component.scss']
+  styleUrls: ['./code.component.scss'],
 })
 export class CodeComponent implements OnInit {
-
   html = `<h2>Bài tập</h2>
   <p>Bài 1: Vẽ tam giác pascal</p>
   <p>Bài 2: Chuyển đổi 1 số thập phân thành nhị phân</p>
@@ -33,7 +33,7 @@ export class CodeComponent implements OnInit {
   <p>Bài 22: Mở file và hiển thị nội dung file trên màn hình</p>
   <p>Bài 23: Chuyển nội dung file thành chữ hoa</p>
   <p>Bài 24: Sao chép và so sánh 2 file</p>
-  `
+  `;
 
   editorOptions = { theme: 'vs-dark', language: 'csharp' };
   code: string = '';
@@ -42,26 +42,32 @@ export class CodeComponent implements OnInit {
   // kiem soat chuyen dong mo
   isShow = false;
   fileName = 'code.js';
+  result = 'This is sample result';
 
-  constructor(private activatedroute:ActivatedRoute) { }
+  constructor(
+    private activatedroute: ActivatedRoute,
+    private homeService: HomeService
+  ) {}
 
   ngOnInit(): void {
-    this.editorOptions.language=this.activatedroute.snapshot.paramMap.get("language");
-    this.fileName = 'code.' + this.getFileExtension(this.editorOptions.language);
+    this.editorOptions.language =
+      this.activatedroute.snapshot.paramMap.get('language');
+    this.fileName =
+      'code.' + this.getFileExtension(this.editorOptions.language);
   }
 
-  getFileExtension(language: string): string{
-    if(language == 'csharp'){
-      return 'cs'
+  getFileExtension(language: string): string {
+    if (language == 'csharp') {
+      return 'cs';
     }
-    if(language == 'python'){
-      return 'py'
+    if (language == 'python') {
+      return 'py';
     }
-    if(language == 'java'){
-      return 'java'
+    if (language == 'java') {
+      return 'java';
     }
   }
-  
+
   saveFile() {
     const blob: any = new Blob([this.code], { type: 'text/plain' });
 
@@ -73,4 +79,26 @@ export class CodeComponent implements OnInit {
     a.remove();
   }
 
+  submitCode(): void {
+    this.homeService
+      .submitCode(
+        this.code,
+        this.getLanguageNumber(this.editorOptions.language)
+      )
+      .subscribe((res) => {
+        this.result = res;
+      });
+  }
+
+  getLanguageNumber(language: string): number {
+    if (language == 'csharp') {
+      return 1;
+    }
+    if (language == 'java') {
+      return 2;
+    }
+    if (language == 'python') {
+      return 3;
+    }
+  }
 }
